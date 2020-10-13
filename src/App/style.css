@@ -42,3 +42,37 @@ footer .tmdb {
 .copyrights .me a {
   color: grey;
 }
+
+.mobile-footer {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .copyrights {
+    display: none;
+  }
+
+  .mobile-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0;
+  }
+
+  .mobile-footer a {
+    text-decoration: none;
+  }
+  .mobile-footer .netflix a {
+    color: red;
+  }
+
+  .mobile-footer .tmdb a {
+    color: rgb(38, 38, 155);
+  }
+
+  .mobile-footer .me a {
+    color: grey;
+  }
+}

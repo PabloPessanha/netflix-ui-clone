@@ -60,6 +60,19 @@ export default () => {
           </span>
         </div>
       </footer>
+      <footer className="mobile-footer">
+        <div className="copyrights-mobile">
+          <span className="tmdb">
+            <a href="https://www.themoviedb.org/">TheMovieDB</a>
+          </span>
+          <span className="netflix">
+            <a href="https://www.netflix.com/">Netflix</a>
+          </span>
+          <span className="me">
+            <a href="https://github.com/PabloPessanha">Pablo Pessanha</a>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 };
