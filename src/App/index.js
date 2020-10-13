@@ -8,6 +8,7 @@ import Header from '../components/Header';
 export default () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -24,9 +25,19 @@ export default () => {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 120) return setBlackHeader(true);
+      return setBlackHeader(false);
+    };
+
+    window.addEventListener('scroll', scrollListener);
+    return () => window.removeEventListener('scroll', scrollListener);
+  }, []);
+
   return (
     <div className="page">
-      <Header />
+      <Header black={blackHeader} />
 
       {featuredData && <FeaturedMovie item={featuredData} />}
 
@@ -35,6 +46,20 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        <div className="copyrights">
+          <span className="tmdb">
+            Database picked from <a href="https://www.themoviedb.org/">TheMovieDB</a>
+          </span>
+          <span className="netflix">
+            All copyrights reserved by <a href="https://www.netflix.com/">Netflix</a>
+          </span>
+          <span className="me">
+            Ui clone made by <a href="https://github.com/PabloPessanha">Pablo Pessanha</a>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 };

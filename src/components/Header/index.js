@@ -3,9 +3,9 @@ import './style.css';
 import Logo from './images/logo.png';
 import User from './images/user-img.png';
 
-export default () => {
+export default ({ black }) => {
   return (
-    <header className="black">
+    <header className={black ? 'black' : ''}>
       <div className="header-logo">
         <a href="/">
           <img src={Logo}></img>
