@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Tmdb from '../Tmdb';
 import MovieRow from '../MovieRow';
 import './style.css';
-import FeaturedMovie from '../MovieRow/FeaturedMovie';
+import FeaturedMovie from '../FeaturedMovie';
 
 export default () => {
   const [movieList, setMovieList] = useState([]);
