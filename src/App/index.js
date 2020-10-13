@@ -12,6 +12,12 @@ export default () => {
     const loadAll = async () => {
       const list = await Tmdb.getHomeList();
       setMovieList(list);
+
+      const originals = list.filter((item) => item.slug === 'originals');
+      const randomChoose = Math.floor(Math.random() * originals[0].items.results.length);
+      const choosen = originals[0].items.results[randomChoose];
+      const choosenInfo = await Tmdb.getMovieInfoList(choosen.id, 'tv');
+      setFeaturedData(choosenInfo);
     };
 
     loadAll();

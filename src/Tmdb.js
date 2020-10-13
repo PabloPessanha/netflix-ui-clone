@@ -54,4 +54,13 @@ export default {
       },
     ];
   },
+  getMovieInfoList: async (movieId, type) => {
+    let info = {};
+
+    if (type === 'movie')
+      info = await basicFetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+    if (type === 'tv') info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+
+    return info;
+  },
 };
