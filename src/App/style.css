@@ -24,21 +24,21 @@ footer {
 }
 
 footer .netflix,
-footer .tmdb,
-footer .me {
-  margin-left: 20px;
+footer .tmdb {
+  margin-right: 30px;
 }
-.copyrights .netflix a {
+.copyrights a {
   text-decoration: none;
-  color: red;
+  font-weight: 400;
 }
-
 .copyrights .tmdb a {
-  text-decoration: none;
   color: rgb(38, 38, 155);
 }
 
+.copyrights .netflix a {
+  color: red;
+}
+
 .copyrights .me a {
-  text-decoration: none;
   color: grey;
 }

@@ -50,7 +50,7 @@ export default () => {
       <footer>
         <div className="copyrights">
           <span className="tmdb">
-            Database picked from <a href="https://www.themoviedb.org/">TheMovieDB</a>
+            Database picked up from <a href="https://www.themoviedb.org/">TheMovieDB</a>
           </span>
           <span className="netflix">
             All copyrights reserved by <a href="https://www.netflix.com/">Netflix</a>
